@@ -6,8 +6,8 @@
 <body>
 	<h1>Hello World!</h1>
 	<h1>DevOps Training - Apr 2023 Batch</h1>
-	<h1>This is automated deployment 2</h1>
-	<h1>webhook trigger</h1>
+	<h1>Trainig deployment</h1>
+	<h1>Success</h1>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>
