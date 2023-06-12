@@ -30,9 +30,9 @@ pipeline{
         //            -Dsonar.java.binaries=target \
         //            -Dsonar.projectKey=java-maven-war-app"
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         stage('Nexus Upload'){
             steps{
