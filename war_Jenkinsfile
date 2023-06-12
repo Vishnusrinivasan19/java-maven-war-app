@@ -4,13 +4,13 @@ pipeline{
     }
 
     tools {
-        maven 'maven_3.9.0'
+        maven 'Maven_3.6.0'
     }
 
     stages{
         stage('SCM Checkout'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/DevOps-SVC04/java-maven-war-app.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vishnusrinivasan19/java-maven-war-app.git']])
             }
 
         }
@@ -24,11 +24,11 @@ pipeline{
         stage('Sonar Scan'){
             steps{
                 withSonarQubeEnv("SonarQube") {
-                    sh "${tool("Sonar_4.8")}/bin/sonar-scanner \
+                    sh "${tool("SonarQube_4.7.0.2747")}/bin/sonar-scanner \
                     -Dsonar.host.url=http://ec2-13-235-87-174.ap-south-1.compute.amazonaws.com:9000/ \
                     -Dsonar.login=sqp_e87123a3f2ff67bcea5de1ef9351a09b3a7d7ea7 \
                     -Dsonar.java.binaries=target \
-                    -Dsonar.projectKey=java-maven-app"
+                    -Dsonar.projectKey=java-maven-war-app"
 
                 }
             }
